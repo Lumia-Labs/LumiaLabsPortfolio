@@ -1,0 +1,51 @@
+.hero-body {
+    font-family: robotocondensed-light;
+    font-size: 18px;
+}
+
+.hero-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0%;
+}
+
+.hero-header {
+    font-family: robotocondensed-bold;
+    font-size: 70px;
+    line-height: 1;
+}
+
+.hero-section {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+    padding-top: 10%;
+}
+
+.hero-text {
+    z-index: 0;
+    position: absolute;
+    width: 30vw;
+    top: 40vh;
+    left: 20vw;
+    color: #000000;
+}
+
+.lightbulb-bg {
+    z-index: -2;
+    position: absolute;
+    left: 15vw;
+    width: 40vw;
+}
+
+.lightbulb-div {
+    z-index: -1;
+    position: absolute;
+    height: 50vw;
+    width: 50vw;
+    top: 10vh;
+    right: 20vw;
+}

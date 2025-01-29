@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { navLinks, navLinksSmall } from '../constants'
 import { logo, menu, close } from '../assets'
 import { AnimatePresence, motion } from 'framer-motion'
+import './styles/navbar.css'
 
 const Navbar = () => {
   const [setActive] = useState("")
@@ -31,7 +32,7 @@ const Navbar = () => {
                             transition={{ ease: [0, 0.71, 0.2, 1.01] }}
                         />
                         <motion.ul
-                            className="no-bullets"
+                            className="menu-text-section no-bullets"
                             initial={{ x: 0, opacity: 0 }}
                             animate={{
                                 x: 100,
@@ -39,8 +40,9 @@ const Navbar = () => {
                                 transition: { duration: 0.25 }
                             }}
                             exit={{
+                                x: 0,
                                 opacity: 0,
-                                transition: { duration: 0.5 } 
+                                transition: { duration: 0.25 } 
                             }}
                             transition={{ ease: [0, 0.71, 0.2, 1.01] }}
                         >

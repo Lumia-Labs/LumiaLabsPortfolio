@@ -1,13 +1,14 @@
 @font-face {
-  font-family: encodesanscondensed-regular;
+  font-family: robotocondensed-bold;
   src: url(./fonts/RobotoCondensed-Bold.ttf);
 }
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@font-face {
+  font-family: robotocondensed-light;
+  src: url(./fonts/RobotoCondensed-Light.ttf);
+}
 
+:root {
   color-scheme: light dark;
   color: rgb(255, 255, 255);
   background-color: #ffff;
@@ -15,73 +16,6 @@
   overflow: hidden;
 }
 
-.logo {
-  position: fixed;
-  width: 100px;
-  top: 15px;
-  right: 40px;
-}
-/* .logo:hover {
-  box-shadow: 0 0px 75px #eaaa3c; 
-} */
-
-.menu-button {
-  position: fixed;
-  top: 30px;
-  left: 40px;
-  border: 1px solid transparent;
-  padding: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-/* button:hover {
-  box-shadow: 0 0px 75px #eaaa3c;
-} */
-.menu-button:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.menu-card {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-height: 80%;
-  /* TODO: Change placeholder background image */
-  background: url("./assets/menu-bg.jpg");
-  background-position: 40% 50%;
-  background-size: 200%;
-  background-repeat: no-repeat;
-  background-clip: padding-box;
-  border: solid rgba(255, 255, 255, 0.1);
-  border-width: 73px 80px 50px 80px;
-}
-
-.menu-main-text {
-  font-size: 26px;
-}
-
-.menu-sub-text {
-  font-size: large;
-}
-
-.menu-text {
-  font-weight: 500;
-  color: #000000;
-  text-decoration: inherit;
-  position: fixed;
-  margin-top: 10%;
-  margin-left: 12%;
-  font-family: encodesanscondensed-regular;
-  letter-spacing: 3px;
-}
-.menu-text:hover {
-  color: #f2bf40;
-  transition-duration: 0.5s;
-}
-
-.no-bullets {
-  list-style-type: none;
+.wrapper {
+  position: relative;
 }
