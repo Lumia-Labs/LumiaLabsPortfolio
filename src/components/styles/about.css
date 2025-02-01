@@ -1,0 +1,48 @@
+.about-bg {
+    z-index: -1;
+}
+
+.about-body {
+    font-family: robotocondensed-light;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.about-box {
+    margin-top: 10%;
+    width: 30%;
+    padding: 3%;
+    background-color: white;
+}
+
+.about-box-left {
+    margin-left: 10%;
+}
+
+.about-box-right {
+    margin-left: 55%;
+}
+
+.about-h2 {
+    font-family: robotocondensed-bold;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
+.about-header {
+    text-align: center;
+    padding-top: 10%;
+    font-family: robotocondensed-bold;
+    font-size: 70px;
+    letter-spacing: 3px;
+    color: white
+}
+
+.about-section {
+    height: 240vh;
+}
+
+.about-text {
+    font-weight: 500;
+    text-decoration: inherit;
+}

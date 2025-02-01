@@ -65,7 +65,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                             ))}
-                            <a>
+                            <a className="select-no">
                                 <br />
                             </a>
                             {navLinksSmall.map((link) => (
@@ -91,14 +91,14 @@ const Navbar = () => {
             {/* TODO: Hover lights up bulb and light rays will rotate */}
             <a href="/">
                 <img
-                    className="logo"
+                    className="logo select-no"
                     src={logo}
                     alt="logo"
                 />
             </a>
             {/* TODO: Animate icons on menu clicks */}
             <button
-                className="menu-button"
+                className="menu-button select-no"
                 onClick={toggleMenu}
                 align="left"
             >

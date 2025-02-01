@@ -30,15 +30,15 @@
   .menu-card {
     z-index: 1;
     position: fixed;
+    object-fit: cover;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    min-height: 80%;
-    /* TODO: Change placeholder background image */
-    background: #ffffff url("../../assets/menu-bg.jpg");
-    background-position: 43% 50%;
-    background-size: 350vmin;
+    background: rgba(255,255,255,0.7) url("../../assets/menu-bg.jpg");
+    background-blend-mode: lighten;
+    background-position: center;
+    background-size: 215vmin;
     background-repeat: no-repeat;
     background-clip: padding-box;
     border: solid rgba(255, 255, 255, 1);
