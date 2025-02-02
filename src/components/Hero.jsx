@@ -1,18 +1,15 @@
-import React from 'react'
-import { Float, OrbitControls, OrthographicCamera, useGLTF, useFBX } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useErrorBoundary } from 'use-error-boundary'
-import { lightbulb_bg } from '../assets'
-import './styles/hero.css'
-import './styles/motion.css'
+import React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useErrorBoundary } from 'use-error-boundary';
+import { SectionWrapper } from '../hoc';
+import { lightbulb_bg } from '../assets';
+import { LightbulbCanvas } from './canvas';
+import './styles/hero.css';
+import './styles/motion.css';
 
 const Hero = () => {
-    const lightbulb = useGLTF('../../public/lightbulb/lightbulb.glb')
-    // TODO: Fix glowing issue for alternate model to use in dark mode
-    // const lightbulb = useFBX('../../public/lightbulb/lightbulb-glow.fbx')
-    const { ErrorBoundary, didCatch, error } = useErrorBoundary()
-    const { scrollYProgress } = useScroll()
+    const { ErrorBoundary, didCatch, error } = useErrorBoundary();
+    const { scrollYProgress } = useScroll();
 
     return didCatch ? (
         <div>{error.message}</div>
@@ -24,7 +21,6 @@ const Hero = () => {
             //TODO: Show only when elements fully loaded
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, ease: "linear" } }}
-            style={{ opacity: useTransform(scrollYProgress, [0, 0.3], [1, 0]) }}
         >
             <div className="hero-text">
                 <header className="hero-header">
@@ -43,34 +39,20 @@ const Hero = () => {
                     it's engineered.
                 </p>
             </div>
-            <div className="lightbulb-div select-no">
+            <motion.div
+                className="lightbulb-div select-no"
+                style={{ opacity: useTransform(scrollYProgress, [0, 0.17], [1, 0]) }}
+            >
                 <img
                     className="lightbulb-bg"
                     src={lightbulb_bg}
                     alt="lightbulb_bg"
                 />
-                <Canvas
-                    frameloop="always"
-                >
-                    <OrbitControls
-                        enableZoom={false}
-                        enableRotate={false}
-                    />
-                    <OrthographicCamera
-                        makeDefault
-                        zoom={30}
-                        position={[4, 0, 20]}
-                    />
-                    <Float>
-                        <mesh rotation={[Math.PI / 4, 0, 0]}>
-                            <primitive object={lightbulb.scene} scale={4} />
-                        </mesh>
-                    </Float>
-                </Canvas>
-            </div>
+                <LightbulbCanvas />
+            </motion.div>
         </motion.div>
     </section>
-    )
+    );
 }
 
-export default Hero
+export default SectionWrapper(Hero, "top");

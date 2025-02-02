@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { navLinks, navLinksSmall } from '../constants'
-import { logo, menu, close } from '../assets'
-import { AnimatePresence, motion } from 'framer-motion'
-import './styles/navbar.css'
+import { useState } from 'react';
+import { navLinks, navLinksSmall } from '../constants';
+import { logo, menu, close } from '../assets';
+import { AnimatePresence, motion } from 'framer-motion';
+import './styles/navbar.css';
 
 const Navbar = () => {
-  const [setActive] = useState("")
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [setActive] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen(!isMenuOpen);
   }
 
     return (
@@ -108,7 +108,7 @@ const Navbar = () => {
                 />
             </button>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

@@ -1,7 +1,7 @@
-import { SectionWrapper } from '../hoc'
-import { motion } from 'framer-motion'
-import Waves from '../assets/Waves/Waves'
-import './styles/about.css'
+import { SectionWrapper } from '../hoc';
+import { motion } from 'framer-motion';
+import Waves from '../../public/reactbits/Waves/Waves';
+import './styles/about.css';
 
 const About = () => {
 
@@ -22,9 +22,10 @@ const About = () => {
                     xGap={12}
                     yGap={20}
                 />
+                {/* TODO: Fix bouncing issue */}
                 <motion.header
                     className="about-text about-header"
-                    initial={{ y: 200, opacity: 0 }}
+                    initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 175, duration: 0.3 } }}
                 >
                     ABOUT
@@ -84,7 +85,7 @@ const About = () => {
                 </motion.div>
             </div>
         </section>
-    )
+    );
 }
 
 export default SectionWrapper(About, "about");

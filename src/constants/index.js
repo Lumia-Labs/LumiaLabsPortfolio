@@ -1,6 +1,6 @@
 export const navLinks = [
     {
-        id: "",
+        id: "#top",
         title: "TOP"
     },
     {
@@ -25,25 +25,60 @@ export const navLinksSmall = [
 ]
 
 export const projects = [
-    // Below is an example, replace with actual projeccts later
     {
-        name: "AI-Powered Analytics",
-        description: "Advanced analytics platform leveraging machine learning for real-time data visualization and predictive insights, helping businesses make data-driven decisions.",
+        // TODO: Choose better projects to showcase
+        id: 1,
+        name: "3D PORTFOLIO WEBSITE",
+        features: "Showcases projects and skills with an engaging user interface",
+        overview: "A personal portfolio website featuring 3D modelling and interactive design elements",
         tags: [
-            {
-                name: "react",
-                color: "text-lumia-blue",
-            },
-            {
-                name: "tensorflow",
-                color: "text-lumia-purple",
-            },
-            {
-                name: "python",
-                color: "text-lumia-blue",
-            },
+            "REACT.JS",
+            "NODE.JS",
+            "THREE.JS",
+            "TAILWIND CSS",
+            "BLENDER"
         ],
-        image: "/project/analytics.png",
-        source_code_link: "https://github.com/",
+        image: "",
+        color: "#c6975f",
+        bg_color: "#faf1e4",
+        source_code_link: "https://kenwoon.github.io/portfolio/",
+        start_scroll_pos: 0.57,
+        end_scroll_pos: 0.7
+    },
+    {
+        id: 2,
+        name: "DATA DASHBOARD",
+        features: "Interactive charts and graphs for data analysis",
+        overview: "A data visualization dashboard allowing users to view data across different date ranges and categories",
+        tags: [
+            "REACT.JS",
+            "CHART.JS",
+            "SEQUELIZE",
+            "POSTGRESQL"
+        ],
+        image: "../assets/projects/",
+        color: "",
+        bg_color: "",
+        source_code_link: "https://github.com/KennyHc/Data-Dashboard",
+        start_scroll_pos: 0.67,
+        end_scroll_pos: 0.8
+    },
+    {
+        id: 3,
+        name: "WAREHOUSE MANAGEMENT TOOL",
+        features: "Product management, stock updates, and a user-friendly dashboard",
+        overview: "A full-stack application for managing warehouse products and stock levels",
+        tags: [
+            "TYPESCRIPT",
+            "CSS",
+            "JAVASCRIPT",
+            "HTML"
+        ],
+        image: "../assets/projects/",
+        color: "",
+        bg_color: "",
+        source_code_link: "https://github.com/KennyHc/warehouse-management-1",
+        start_scroll_pos: 0.77,
+        end_scroll_pos: 0.9
     }
 ]; 

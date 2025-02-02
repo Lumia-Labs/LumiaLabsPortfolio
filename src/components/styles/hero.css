@@ -6,7 +6,7 @@
 
 .hero-div {
     z-index: -1;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -20,7 +20,7 @@
 
 .hero-section {
     position: relative;
-    min-height: 150vh;
+    min-height: 100vh;
     min-width: 100vw;
     top: 0;
     left: 0;
@@ -45,7 +45,7 @@
 
 .lightbulb-div {
     z-index: -1;
-    position: absolute;
+    position: fixed;
     height: 50vw;
     width: 50vw;
     top: 10vh;

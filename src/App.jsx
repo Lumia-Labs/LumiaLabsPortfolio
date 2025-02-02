@@ -1,5 +1,5 @@
-import { BrowserRouter } from 'react-router-dom'
-import { Navbar, Hero, About } from './components'
+import { BrowserRouter } from 'react-router-dom';
+import { Navbar, Hero, About, Projects } from './components';
 
 function App() {
   return (
@@ -9,12 +9,12 @@ function App() {
         <Hero />
         <About />
         {/* <Services /> */}
-        {/* <Projects /> */}
+        <Projects />
         {/* <Contact /> */}
         {/* <Footer />  */}
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
