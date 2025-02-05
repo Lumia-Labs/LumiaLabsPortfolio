@@ -7,10 +7,10 @@
     overflow: hidden;
     overscroll-behavior: none;
     border-block: 2px dotted transparent;
-  }
-  
-  .infinite-scroll-wrapper::before,
-  .infinite-scroll-wrapper::after {
+}
+
+.infinite-scroll-wrapper::before,
+.infinite-scroll-wrapper::after {
     content: "";
     position: absolute;
     background: linear-gradient(var(--dir, to bottom), black, transparent);
@@ -18,27 +18,26 @@
     width: 100%;
     z-index: 1;
     pointer-events: none;
-  }
-  
-  .infinite-scroll-wrapper::before {
+}
+
+.infinite-scroll-wrapper::before {
     top: 0;
-  }
-  
-  .infinite-scroll-wrapper::after {
+}
+
+.infinite-scroll-wrapper::after {
     --dir: to top;
     bottom: 0;
-  }
-  
-  .infinite-scroll-container {
+    }
+
+.infinite-scroll-container {
     display: flex;
     flex-direction: column;
-    overscroll-behavior: contain;
+    overscroll-behavior: auto;
     padding-inline: 1rem;
-    cursor: grab;
     transform-origin: center center;
-  }
-  
-  .infinite-scroll-item {
+}
+
+.infinite-scroll-item {
     --accent-color: #ffffff;
     border-radius: 15px;
     display: flex;
@@ -48,8 +47,9 @@
     font-size: 1.25rem;
     font-weight: 600;
     text-align: center;
+    color: white;
     border: 2px solid var(--accent-color);
     user-select: none;
     box-sizing: border-box;
     position: relative;
-  }
+}

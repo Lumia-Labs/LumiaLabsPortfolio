@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { Navbar, Hero, About, Projects } from './components';
+import { Navbar, Hero, About, Projects, Members } from './components';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <About />
         {/* <Services /> */}
         <Projects />
+        <Members />
         {/* <Contact /> */}
         {/* <Footer />  */}
       </div>

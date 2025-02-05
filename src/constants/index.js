@@ -1,3 +1,8 @@
+import adnanahmed from "../assets/members/adnan-ahmed.jpg";
+import allenhwu from "../assets/members/allen-hwu.jpeg";
+import kenwoon from "../assets/members/ken-woon.jpeg";
+import kennyhe from "../assets/members/kenny-he.jpg";
+
 export const navLinks = [
     {
         id: "#top",
@@ -14,6 +19,10 @@ export const navLinks = [
     {
         id: "#projects",
         title: "PROJECTS"
+    },
+    {
+        id: "#members",
+        title: "MEMBERS"
     }
 ];
 
@@ -22,11 +31,11 @@ export const navLinksSmall = [
         id: "#contact",
         title: "Contact"
     }
-]
+];
 
 export const projects = [
+    // TODO: Choose better projects to showcase
     {
-        // TODO: Choose better projects to showcase
         id: 1,
         name: "3D PORTFOLIO WEBSITE",
         features: "Showcases projects and skills with an engaging user interface",
@@ -42,8 +51,8 @@ export const projects = [
         color: "#c6975f",
         bg_color: "#faf1e4",
         source_code_link: "https://kenwoon.github.io/portfolio/",
-        start_scroll_pos: 0.57,
-        end_scroll_pos: 0.7
+        start_scroll_pos: 0.45,
+        end_scroll_pos: 0.58
     },
     {
         id: 2,
@@ -56,12 +65,12 @@ export const projects = [
             "SEQUELIZE",
             "POSTGRESQL"
         ],
-        image: "../assets/projects/",
+        image: "",
         color: "",
         bg_color: "",
         source_code_link: "https://github.com/KennyHc/Data-Dashboard",
-        start_scroll_pos: 0.67,
-        end_scroll_pos: 0.8
+        start_scroll_pos: 0.55,
+        end_scroll_pos: 0.68
     },
     {
         id: 3,
@@ -74,11 +83,70 @@ export const projects = [
             "JAVASCRIPT",
             "HTML"
         ],
-        image: "../assets/projects/",
+        image: "",
         color: "",
         bg_color: "",
         source_code_link: "https://github.com/KennyHc/warehouse-management-1",
-        start_scroll_pos: 0.77,
-        end_scroll_pos: 0.9
+        start_scroll_pos: 0.65,
+        end_scroll_pos: 0.78
     }
-]; 
+];
+
+export const members = [
+    // TODO: Get images for each member and edit bios
+    {
+        id: 1,
+        name: "Adnan Makhdum Ahmed",
+        title: "Co-Founder",
+        image: adnanahmed,
+        bio: "Adnan is a co-founder of LumiaLabs and leads the management and operations of the company. He has a background in civil engineering and project management.",
+        social_media: {
+            linkedin: "https://www.linkedin.com/in/adnan-makhdum-a-19a6ba18a/",
+            github: ""
+        }
+    },
+    {
+        id: 2,
+        name: "Allen Hwu",
+        title: "Co-Founder",
+        image: allenhwu,
+        bio: "Allen is a one of the co-founders of LumiaLabs and leads the management and operations of the company. He has a background in psychology and project management.",
+        social_media: {
+            linkedin: "https://www.linkedin.com/in/allenhwu1/",
+            github: ""
+        }
+    },
+    {
+        id: 3,
+        name: "Fahid Shadman Karim",
+        title: "Software Developer",
+        image: "",
+        bio: "Fahid is a software developer at LumiaLabs and specializes in full-stack development. He has a background in computer science and software engineering.",
+        social_media: {
+            linkedin: "https://www.linkedin.com/in/fahid-s-karim/",
+            github: "https://github.com/FahidShadmanKarim"
+        }
+    },
+    {
+        id: 4,
+        name: "Ken Woon",
+        title: "Software Developer",
+        image: kenwoon,
+        bio: "Ken is a software developer at LumiaLabs and specializes in full-stack development. He has a background in electrical engineering, mechatronics, and software engineering.",
+        social_media: {
+            linkedin: "https://www.linkedin.com/in/xk-woon/",
+            github: "https://github.com/kenwoon"
+        }
+    },
+    {
+        id: 5,
+        name: "Kenny He",
+        title: "Software Developer",
+        image: kennyhe,
+        bio: "Kenny is a software developer at LumiaLabs and specializes in full-stack development. He has a background in computer science and software engineering.",
+        social_media: {
+            linkedin: "https://www.linkedin.com/in/kenny-he-chen/",
+            github: "https://github.com/KennyHc"
+        }
+    }
+];

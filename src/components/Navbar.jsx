@@ -5,12 +5,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import './styles/navbar.css';
 
 const Navbar = () => {
-  const [setActive] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  }
+    const [setActive] = useState("");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    }
 
     return (
         <nav>

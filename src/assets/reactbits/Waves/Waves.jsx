@@ -243,9 +243,8 @@ export default function Waves({
       className={`waves ${className}`}
       style={{
         position: "absolute",
-        // top: 0
         left: 0, margin: 0, padding: 0,
-        width: "100%", height: "240vh", overflow: "hidden",
+        width: "100vw", minHeight: "100vh", overflow: "hidden",
         backgroundColor,
         ...style
       }}

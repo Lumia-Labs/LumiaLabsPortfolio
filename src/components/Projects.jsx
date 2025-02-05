@@ -1,7 +1,7 @@
 import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
-import TiltedCard from '../../public/reactbits/TiltedCard/TiltedCard';
+import TiltedCard from '../assets/reactbits/TiltedCard/TiltedCard';
 import './styles/projects.css';
 
 const Projects = () =>  {
@@ -21,6 +21,7 @@ const Projects = () =>  {
                     <motion.div
                         key={project.id}
                         className="project-div"
+                        //TODO: Use another way to check scroll position that will not be affected by the height of the viewport
                         style={{ opacity: useTransform(scrollYProgress, [project.start_scroll_pos, project.end_scroll_pos], [0, 1]) }}
                     >
                         <motion.div
@@ -60,6 +61,7 @@ const Projects = () =>  {
                         </motion.div>
                     </motion.div>
                 ))}
+                <div style={{ marginTop: "10%" }}/>
             </div>
         </section>
     );

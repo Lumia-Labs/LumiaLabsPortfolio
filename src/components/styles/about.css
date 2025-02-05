@@ -1,5 +1,8 @@
 .about-bg {
     z-index: -1;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .about-body {
@@ -23,6 +26,11 @@
     margin-left: 55%;
 }
 
+.about-div {
+    position: relative;
+    height: 100%;
+}
+
 .about-h2 {
     font-family: robotocondensed-bold;
     font-size: 26px;
@@ -31,7 +39,7 @@
 
 .about-header {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 5%;
     font-family: robotocondensed-bold;
     font-size: 70px;
     letter-spacing: 3px;
@@ -39,7 +47,9 @@
 }
 
 .about-section {
-    height: 240vh;
+    display: inline-block;
+    min-height: 100vh;
+    width: 100vw;
 }
 
 .about-text {

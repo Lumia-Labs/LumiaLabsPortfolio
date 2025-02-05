@@ -1,29 +1,35 @@
 @font-face {
-  font-family: robotocondensed-bold;
-  src: url(./fonts/RobotoCondensed-Bold.ttf);
+    font-family: robotocondensed-bold;
+    src: url(./fonts/RobotoCondensed-Bold.ttf);
 }
 
 @font-face {
-  font-family: robotocondensed-light;
-  src: url(./fonts/RobotoCondensed-Light.ttf);
+    font-family: robotocondensed-light;
+    src: url(./fonts/RobotoCondensed-Light.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* TODO: Fix horizontal scroll issue */
 :root {
-  color-scheme: light dark;
-  color: rgb(0, 0, 0);
-  background-color: #ffff;
-  overflow-x: hidden;
+    color-scheme: light dark;
+    color: rgb(0, 0, 0);
+    background-color: #ffff;
+    overflow-x: hidden;
 }
 
 .select-no {
-  -webkit-touch-callout: none;  /* iOS Safari */
-  -webkit-user-select: none;    /* Safari */
-  -khtml-user-select: none;     /* Konqueror HTML */
-  -moz-user-select: none;       /* Old versions of Firefox */
-  -ms-user-select: none;        /* Internet Explorer/Edge */
-  user-select: none;            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;  /* iOS Safari */
+    -webkit-user-select: none;    /* Safari */
+    -khtml-user-select: none;     /* Konqueror HTML */
+    -moz-user-select: none;       /* Old versions of Firefox */
+    -ms-user-select: none;        /* Internet Explorer/Edge */
+    user-select: none;            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .wrapper {
-  position: relative;
+    position: relative;
 }

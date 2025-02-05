@@ -5,11 +5,8 @@
 }
 
 .hero-div {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    /* z-index: -1; */
+    position: relative;
 }
 
 .hero-header {
@@ -19,11 +16,9 @@
 }
 
 .hero-section {
-    position: relative;
+    display: inline-block;
     min-height: 100vh;
     min-width: 100vw;
-    top: 0;
-    left: 0;
     padding-top: 10%;
 }
 
@@ -31,7 +26,7 @@
     z-index: 0;
     position: absolute;
     width: 30vw;
-    top: 40vh;
+    top: 20vh;
     left: 20vw;
     color: #000000;
 }

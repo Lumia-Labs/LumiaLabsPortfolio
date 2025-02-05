@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { AvatarCanvas } from "../../../src/components/canvas";
+import { AvatarCanvas } from "../../../components/canvas";
 import "./TiltedCard.css";
 
 const springValues = {
@@ -13,7 +13,6 @@ export default function TiltedCard({
     projectId,
     imageSrc,
     color,
-    altText = "Tilted card image",
     captionText = "",
     containerHeight = "300px",
     containerWidth = "100%",
@@ -91,7 +90,6 @@ export default function TiltedCard({
         display =
             <motion.img
                 src={imageSrc}
-                alt={altText}
                 className="tilted-card-img"
                 style={{
                     width: imageWidth,

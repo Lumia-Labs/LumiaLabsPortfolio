@@ -1,13 +1,13 @@
 import { SectionWrapper } from '../hoc';
 import { motion } from 'framer-motion';
-import Waves from '../../public/reactbits/Waves/Waves';
+import Waves from '../assets/reactbits/Waves/Waves';
 import './styles/about.css';
 
 const About = () => {
 
     return (
         <section className="about-section">
-            <div>
+            <div className="about-div">
                 <Waves
                     className="about-bg no-select"
                     lineColor="rgba(255, 255, 255, 0.3)"
@@ -83,6 +83,7 @@ const About = () => {
                         protocols, shaping the future of decentralized applications.
                     </p>
                 </motion.div>
+                <div style={{ marginTop: "10%" }}/>
             </div>
         </section>
     );
