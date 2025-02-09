@@ -54,4 +54,4 @@ const Members = () => {
     )
 }
 
-export default SectionWrapper(Members, "top");
+export default SectionWrapper(Members, "members");

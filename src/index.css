@@ -1,4 +1,9 @@
 @font-face {
+    font-family: liter-regular;
+    src: url(./fonts/Liter-Regular.ttf);
+}
+
+@font-face {
     font-family: robotocondensed-bold;
     src: url(./fonts/RobotoCondensed-Bold.ttf);
 }
@@ -16,9 +21,9 @@
 /* TODO: Fix horizontal scroll issue */
 :root {
     color-scheme: light dark;
-    color: rgb(0, 0, 0);
-    background-color: #ffff;
-    overflow-x: hidden;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    /* overflow-x: hidden; */
 }
 
 .select-no {
@@ -33,3 +38,22 @@
 .wrapper {
     position: relative;
 }
+
+#scroll-container {
+    overflow: hidden;
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+#viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }

@@ -1,21 +1,53 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Navbar, Hero, About, Projects, Members } from './components';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { BrowserRouter } from "react-router-dom";
+import { Navbar, Hero, About, Services, Projects, Members } from "./components";
+import { Canvas } from "@react-three/fiber";
+import { LightbulbScene, Scene } from './components/canvas';
 
+gsap.registerPlugin(ScrollTrigger);
+
+//TODO: Fix scrolling issue when menu redirect to section
 function App() {
-  return (
+const containerRef = useRef(null);
+
+useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const height = container.clientHeight;
+    document.body.style.height = `${height}px`;
+
+    gsap.to(container, {
+        y: -(height - window.innerHeight),
+        ease: 'power1.out',
+        scrollTrigger: {
+            trigger: document.body,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1
+        }
+    });
+}, []);
+
+return (
     <BrowserRouter>
-      <div>
-        <Navbar />
-        <Hero />
-        <About />
-        {/* <Services /> */}
-        <Projects />
-        <Members />
-        {/* <Contact /> */}
-        {/* <Footer />  */}
-      </div>
+        <div id="viewport">
+            <Navbar />
+            {/* <Canvas style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0 }}>
+                <Scene />
+            </Canvas> */}
+            <div id="scroll-container" ref={containerRef}>
+                <Hero />
+                <About />
+                <Services />
+                <Projects />
+                <Members />
+            </div>
+        </div>
     </BrowserRouter>
-  );
+);
 }
 
 export default App;

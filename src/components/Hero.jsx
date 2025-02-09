@@ -6,6 +6,7 @@ import { lightbulb_bg } from '../assets';
 import { LightbulbCanvas } from './canvas';
 import './styles/hero.css';
 import './styles/motion.css';
+import { Canvas } from '@react-three/fiber';
 
 const Hero = () => {
     const { ErrorBoundary, didCatch, error } = useErrorBoundary();
@@ -41,7 +42,7 @@ const Hero = () => {
             </div>
             <motion.div
                 className="lightbulb-div select-no"
-                style={{ opacity: useTransform(scrollYProgress, [0, 0.17], [1, 0]) }}
+                style={{ opacity: useTransform(scrollYProgress, [0, 0.08], [1, 0]) }}
             >
                 <img
                     className="lightbulb-bg"

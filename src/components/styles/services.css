@@ -1,0 +1,52 @@
+.service-card {
+    margin: 1px;
+    width: 387px;
+    height: 591px;
+    clip-path: inset(10px);
+    transition: clip-path 0.75s;
+    background-size: contain;
+}
+.service-card:hover {
+    clip-path: inset(0px);
+}
+
+.service-body {
+    font-family: robotocondensed-light;
+    font-size: 16px;
+    padding-top: 10%;
+}
+
+.service-h2 {
+    font-family: robotocondensed-bold;
+    font-size: 60px;
+    padding-top: 15%;
+}
+
+.service-text {
+    padding: 5%;
+    color: white;
+}
+
+.services-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    flex-grow: 1;
+}
+
+.services-header {
+    font-family: robotocondensed-bold;
+    font-size: 70px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.services-section {
+    display: inline-block;
+    min-height: 100vh;
+    min-width: 100vw;
+}
