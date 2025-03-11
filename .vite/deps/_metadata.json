@@ -1,0 +1,124 @@
+{
+  "hash": "b705e0c4",
+  "configHash": "1279b1d5",
+  "lockfileHash": "cccdc44e",
+  "browserHash": "42ea346b",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "163d8e48",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "75d9ab7e",
+      "needsInterop": true
+    },
+    "@emailjs/browser": {
+      "src": "../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "5f2df7e8",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "4d127378",
+      "needsInterop": false
+    },
+    "gsap/all": {
+      "src": "../../node_modules/gsap/all.js",
+      "file": "gsap_all.js",
+      "fileHash": "8f4f322c",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "b6079fb7",
+      "needsInterop": false
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "f8599d15",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "6279e1aa",
+      "needsInterop": false
+    },
+    "use-error-boundary": {
+      "src": "../../node_modules/use-error-boundary/lib/index.module.js",
+      "file": "use-error-boundary.js",
+      "fileHash": "07c479ec",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "5f8d1b9d",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "ef4248fc",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "4623c738",
+      "needsInterop": false
+    },
+    "popmotion": {
+      "src": "../../node_modules/popmotion/dist/es/index.mjs",
+      "file": "popmotion.js",
+      "fileHash": "31da51f8",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "hls-Z7BF4YNI": {
+      "file": "hls-Z7BF4YNI.js"
+    },
+    "chunk-T2F7LD4Q": {
+      "file": "chunk-T2F7LD4Q.js"
+    },
+    "vision_bundle-EJYKSMNM": {
+      "file": "vision_bundle-EJYKSMNM.js"
+    },
+    "chunk-ADVQML2F": {
+      "file": "chunk-ADVQML2F.js"
+    },
+    "chunk-6RPRAJGR": {
+      "file": "chunk-6RPRAJGR.js"
+    },
+    "chunk-54D56QPT": {
+      "file": "chunk-54D56QPT.js"
+    },
+    "chunk-UP6LQVYV": {
+      "file": "chunk-UP6LQVYV.js"
+    },
+    "chunk-B5WRLLJS": {
+      "file": "chunk-B5WRLLJS.js"
+    },
+    "chunk-3HQXR35A": {
+      "file": "chunk-3HQXR35A.js"
+    },
+    "chunk-RZSASJON": {
+      "file": "chunk-RZSASJON.js"
+    },
+    "chunk-TWJRYSII": {
+      "file": "chunk-TWJRYSII.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
+    }
+  }
+}

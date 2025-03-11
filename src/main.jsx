@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+window.React = React
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import emailjs from '@emailjs/browser';
