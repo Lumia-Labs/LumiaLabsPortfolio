@@ -7,7 +7,7 @@ import App from './App.jsx';
 emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+//   <StrictMode>
     <App />
-  </StrictMode>,
+//   </StrictMode>,
 );

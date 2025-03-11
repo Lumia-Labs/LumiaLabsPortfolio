@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import TiltedCard from '../assets/reactbits/TiltedCard/TiltedCard';
@@ -22,7 +22,8 @@ const Projects = () =>  {
                     // Individual scroll tracking for each project
                     const { scrollYProgress } = useScroll({
                         target: ref,
-                        offset: ["-300% end", "-150% start"],
+                        // offset: ["-300% end", "-150% start"],
+                        offset: ["start end", "60vh start"]
                     });
 
                     // Apply animations based on each project's scroll progress

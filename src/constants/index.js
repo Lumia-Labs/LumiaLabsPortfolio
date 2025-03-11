@@ -34,7 +34,6 @@ export const navLinksSmall = [
 ];
 
 export const services = [
-    //TODO: Add images for each service
     {
         id: 1,
         name: "AI & Machine Learning",
