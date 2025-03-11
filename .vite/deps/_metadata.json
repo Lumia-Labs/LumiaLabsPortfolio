@@ -1,85 +1,91 @@
 {
-  "hash": "b705e0c4",
-  "configHash": "1279b1d5",
+  "hash": "b3e7b89a",
+  "configHash": "b8282018",
   "lockfileHash": "cccdc44e",
-  "browserHash": "42ea346b",
+  "browserHash": "bd1cb51d",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "163d8e48",
+      "fileHash": "6eddb77e",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "64ebbedb",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "75d9ab7e",
+      "fileHash": "fc8770a9",
       "needsInterop": true
     },
     "@emailjs/browser": {
       "src": "../../node_modules/@emailjs/browser/es/index.js",
       "file": "@emailjs_browser.js",
-      "fileHash": "5f2df7e8",
+      "fileHash": "cf73b868",
       "needsInterop": false
     },
     "gsap": {
       "src": "../../node_modules/gsap/index.js",
       "file": "gsap.js",
-      "fileHash": "4d127378",
+      "fileHash": "c680784d",
       "needsInterop": false
     },
     "gsap/all": {
       "src": "../../node_modules/gsap/all.js",
       "file": "gsap_all.js",
-      "fileHash": "8f4f322c",
+      "fileHash": "5ce4a130",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "b6079fb7",
+      "fileHash": "bc6787f4",
       "needsInterop": false
     },
     "@react-three/fiber": {
       "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
       "file": "@react-three_fiber.js",
-      "fileHash": "f8599d15",
+      "fileHash": "141ba1fd",
       "needsInterop": false
     },
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "6279e1aa",
+      "fileHash": "07f7979d",
       "needsInterop": false
     },
     "use-error-boundary": {
       "src": "../../node_modules/use-error-boundary/lib/index.module.js",
       "file": "use-error-boundary.js",
-      "fileHash": "07c479ec",
+      "fileHash": "fa07e37c",
       "needsInterop": false
     },
     "gsap/ScrollTrigger": {
       "src": "../../node_modules/gsap/ScrollTrigger.js",
       "file": "gsap_ScrollTrigger.js",
-      "fileHash": "5f8d1b9d",
+      "fileHash": "2140d1c4",
       "needsInterop": false
     },
     "@react-three/drei": {
       "src": "../../node_modules/@react-three/drei/index.js",
       "file": "@react-three_drei.js",
-      "fileHash": "ef4248fc",
+      "fileHash": "d949d2ba",
       "needsInterop": false
     },
     "three": {
       "src": "../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "4623c738",
+      "fileHash": "9c775ba7",
       "needsInterop": false
     },
     "popmotion": {
       "src": "../../node_modules/popmotion/dist/es/index.mjs",
       "file": "popmotion.js",
-      "fileHash": "31da51f8",
+      "fileHash": "8baad145",
       "needsInterop": false
     }
   },
@@ -93,8 +99,8 @@
     "vision_bundle-EJYKSMNM": {
       "file": "vision_bundle-EJYKSMNM.js"
     },
-    "chunk-ADVQML2F": {
-      "file": "chunk-ADVQML2F.js"
+    "chunk-4TVEOIRP": {
+      "file": "chunk-4TVEOIRP.js"
     },
     "chunk-6RPRAJGR": {
       "file": "chunk-6RPRAJGR.js"
@@ -102,17 +108,17 @@
     "chunk-54D56QPT": {
       "file": "chunk-54D56QPT.js"
     },
-    "chunk-UP6LQVYV": {
-      "file": "chunk-UP6LQVYV.js"
+    "chunk-ATGQIJLN": {
+      "file": "chunk-ATGQIJLN.js"
     },
-    "chunk-B5WRLLJS": {
-      "file": "chunk-B5WRLLJS.js"
-    },
-    "chunk-3HQXR35A": {
-      "file": "chunk-3HQXR35A.js"
+    "chunk-65KPAWMV": {
+      "file": "chunk-65KPAWMV.js"
     },
     "chunk-RZSASJON": {
       "file": "chunk-RZSASJON.js"
+    },
+    "chunk-3HQXR35A": {
+      "file": "chunk-3HQXR35A.js"
     },
     "chunk-TWJRYSII": {
       "file": "chunk-TWJRYSII.js"

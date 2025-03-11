@@ -46,6 +46,7 @@ function App() {
                     <Members />
                 </div>
             </div>
+            <link rel="stylesheet" href="style.css" />
         </BrowserRouter>
     );
 };
