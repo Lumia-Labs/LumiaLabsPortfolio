@@ -1,0 +1,65 @@
+@font-face {
+    font-family: robotocondensed-bold;
+    src: url(./fonts/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: robotocondensed-light;
+    src: url(./fonts/RobotoCondensed-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* TODO: Fix horizontal scroll issue */
+:root {
+    color-scheme: light dark;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+.no-select {
+    -webkit-touch-callout: none;  /* iOS Safari */
+    -webkit-user-select: none;    /* Safari */
+    -khtml-user-select: none;     /* Konqueror HTML */
+    -moz-user-select: none;       /* Old versions of Firefox */
+    -ms-user-select: none;        /* Internet Explorer/Edge */
+    -o-user-select: none;
+    user-select: none;            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.yes-select {
+    -webkit-touch-callotu: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+  }
+
+.wrapper {
+    position: relative;
+}
+
+/* #scroll-container {
+    overflow: hidden;
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+#viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  } */
