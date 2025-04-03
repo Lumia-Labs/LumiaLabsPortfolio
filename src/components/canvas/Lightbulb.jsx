@@ -2,7 +2,7 @@ import { Float, OrbitControls, OrthographicCamera, useGLTF, useFBX } from '@reac
 import { Canvas } from '@react-three/fiber';
 
 const LightbulbCanvas = () => {
-    const lightbulb = useGLTF('/models/lightbulb/lightbulb.glb');
+    const lightbulb = useGLTF('./models/lightbulb/lightbulb.glb');
     // TODO: Fix glowing issue for alternate model to use in dark mode
     // const lightbulb = useFBX('../../public/lightbulb/lightbulb-glow.fbx');
 

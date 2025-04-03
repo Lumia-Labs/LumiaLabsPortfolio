@@ -4,9 +4,9 @@ import { Environment, Preload, useAnimations, useFBX, useGLTF } from "@react-thr
 
 export function Avatar(props) {
     const group = useRef();
-    const { nodes, materials } = useGLTF("/models/avatar/avatar.glb");
+    const { nodes, materials } = useGLTF("./models/avatar/avatar.glb");
     const { animation } = props;
-    const { animations: typingAnimation } = useFBX("/models/avatar/typing.fbx");
+    const { animations: typingAnimation } = useFBX("./models/avatar/typing.fbx");
     typingAnimation[0].name = "Typing";
     const { actions } = useAnimations([typingAnimation[0]], group);
 

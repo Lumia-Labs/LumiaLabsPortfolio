@@ -7,7 +7,7 @@ import { degreesToRadians, progress, mix } from "popmotion";
 import { Float, OrthographicCamera, useGLTF } from '@react-three/drei';
 
 const Icosahedron = () => {
-    const lightbulb = useGLTF('/models/lightbulb/lightbulb.glb');
+    const lightbulb = useGLTF('./models/lightbulb/lightbulb.glb');
 
     return (
         <>
