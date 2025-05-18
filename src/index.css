@@ -8,7 +8,10 @@
     src: url(./fonts/RobotoCondensed-Light.ttf);
 }
 
-* {
+html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -19,6 +22,18 @@
     color: black;
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
+}
+
+#viewport {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+#scroll-container {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .no-select {
