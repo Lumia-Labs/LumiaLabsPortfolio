@@ -12,42 +12,60 @@ const Services = () => {
     useEffect(() => {
         const images = gsap.utils.toArray(".left-content img");
         const rightElements = gsap.utils.toArray(".right-content .service-text");
+        const isMobile = window.innerWidth <= 640;
+
+        // Dynamic scroll length based on number of services
+        const scrollLength = services.length * 1000; // Increased to 1000px per service for smoother transitions
 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container",
                 start: "top top",
-                end: "bottom top",
+                end: `+=${scrollLength}`,
                 pin: true,
                 scrub: 1,
-
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                pinSpacing: true,
+                fastScrollEnd: true,
+                preventOverlaps: true
             }
         });
+
+        // Set initial state for mobile
+        if (isMobile) {
+            images.forEach((img, i) => {
+                if (i > 0) {
+                    gsap.set(img, { opacity: 0 });
+                }
+            });
+        }
 
         images.forEach((img, i) => {
             if (images[i + 1]) {
-                // Creates delay between sections
-                // tl.to(img, { opacity: 0 }, "+=0.5")
-
-                // This is one after the other without pause
                 tl
-                .to(img, { opacity: 0 })
-                .to(images[i + 1], { opacity: 1 }, "<")
-                .to(rightElements, { yPercent: -(100 * (i + 1)), ease: "none" }, "<");
+                .to(img, { opacity: 0, duration: 0.5 })
+                .to(images[i + 1], { opacity: 1, duration: 0.5 }, "<")
+                .to(rightElements, { yPercent: -(100 * (i + 1)), ease: "none", duration: 0.5 }, "<");
             }
         });
 
-        // Adds pause at the end of the timeline
-        // tl.to({}, {}, "+=0.5");
+        // Cleanup function
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
     }, []);
 
     return (
         <div className="service-section">
-            <header
+            <motion.header
                 className="services-header"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 SERVICES
-            </header>
+            </motion.header>
             <div className="container">
                 <div className="left-container">
                     <div className="left-content">

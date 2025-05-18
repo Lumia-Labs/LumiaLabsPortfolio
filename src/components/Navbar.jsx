@@ -11,6 +11,21 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     }
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            if (id === 'projects') {
+                const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - 30;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            } else {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
     return (
         <nav>
             <AnimatePresence mode="wait">
@@ -49,13 +64,15 @@ const Navbar = () => {
                                 <li
                                     key={link.id}
                                     onClick={() => {
-                                        setIsMenuOpen(false)
-                                        setActive(link.title)
+                                        setIsMenuOpen(false);
+                                        setActive(link.title);
+                                        scrollToSection(link.id.replace('#', ''));
                                     }}
                                 >
                                     <a
                                         className="menu-text menu-main-text"
-                                        href={`${link.id}`}    
+                                        href={`${link.id}`}
+                                        onClick={(e) => e.preventDefault()}
                                     >
                                         {link.title}
                                     </a>
@@ -71,13 +88,15 @@ const Navbar = () => {
                                 <li
                                     key={link.id}
                                     onClick={() => {
-                                        setIsMenuOpen(false)
-                                        setActive(link.title)
+                                        setIsMenuOpen(false);
+                                        setActive(link.title);
+                                        scrollToSection(link.id.replace('#', ''));
                                     }}
                                 >
                                     <a
                                         className="menu-text menu-sub-text"
                                         href={`${link.id}`}
+                                        onClick={(e) => e.preventDefault()}
                                     >
                                         {link.title}
                                     </a>

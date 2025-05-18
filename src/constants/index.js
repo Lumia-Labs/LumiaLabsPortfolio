@@ -91,7 +91,6 @@ export const services = [
 ]
 
 export const projects = [
-    // TODO: Choose better projects to showcase
     {
         id: 1,
         name: "3D PORTFOLIO WEBSITE",
@@ -104,7 +103,7 @@ export const projects = [
             "TAILWIND CSS",
             "BLENDER"
         ],
-        image: "",
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
         color: "#c6975f",
         bg_color: "#faf1e4",
         source_code_link: "https://kenwoon.github.io/portfolio/",
@@ -122,9 +121,9 @@ export const projects = [
             "SEQUELIZE",
             "POSTGRESQL"
         ],
-        image: "",
-        color: "",
-        bg_color: "cyan",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        color: "#00bcd4",
+        bg_color: "#e0f7fa",
         source_code_link: "https://github.com/KennyHc/Data-Dashboard",
         start_scroll_pos: 0.55,
         end_scroll_pos: 0.68
@@ -140,9 +139,9 @@ export const projects = [
             "JAVASCRIPT",
             "HTML"
         ],
-        image: "",
-        color: "",
-        bg_color: "green",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
+        color: "#4caf50",
+        bg_color: "#e8f5e9",
         source_code_link: "https://github.com/KennyHc/warehouse-management-1",
         start_scroll_pos: 0.65,
         end_scroll_pos: 0.78

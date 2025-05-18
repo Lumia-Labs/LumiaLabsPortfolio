@@ -211,7 +211,7 @@ export default function Waves({
     function updateMouse(x, y) {
       const mouse = mouseRef.current, b = boundingRef.current;
       mouse.x = x - b.left;
-      mouse.y = y - b.top + window.scrollY;
+      mouse.y = y - b.top;
       if (!mouse.set) {
         mouse.sx = mouse.x; mouse.sy = mouse.y;
         mouse.lx = mouse.x; mouse.ly = mouse.y;

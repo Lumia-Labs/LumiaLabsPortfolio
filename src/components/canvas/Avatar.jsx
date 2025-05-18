@@ -4,9 +4,9 @@ import { Environment, Preload, useAnimations, useFBX, useGLTF } from "@react-thr
 
 export function Avatar(props) {
     const group = useRef();
-    const { nodes, materials } = useGLTF("./models/avatar/avatar.glb");
+    const { nodes, materials } = useGLTF("/LumiaLabsPortfolio/models/avatar/avatar.glb");
     const { animation } = props;
-    const { animations: typingAnimation } = useFBX("./models/avatar/typing.fbx");
+    const { animations: typingAnimation } = useFBX("/LumiaLabsPortfolio/models/avatar/typing.fbx");
     typingAnimation[0].name = "Typing";
     const { actions } = useAnimations([typingAnimation[0]], group);
 
@@ -86,6 +86,9 @@ export function Avatar(props) {
 }
 
 const AvatarCanvas = () => {
+    const isMobile = window.innerWidth <= 640;
+    const size = isMobile ? 350 : 400;
+
     return (
         <Canvas
             frameloop="always"
@@ -93,6 +96,11 @@ const AvatarCanvas = () => {
             dpr={[1, 2]}
             camera={{ position: [1, 1, 3.5], fov: 35 }}
             gl={{ preserveDrawingBuffer: true }}
+            style={{ 
+                borderRadius: '15px',
+                width: `${size}px`,
+                height: `${size}px`
+            }}
         >
             <color attach="background" args={["#FAF1E4"]} />
             <Environment preset="lobby" />

@@ -1,13 +1,13 @@
 import { SectionWrapper } from '../hoc';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Waves from '../assets/reactbits/Waves/Waves';
 import './styles/about.css';
 
 const About = () => {
+    const { scrollYProgress } = useScroll();
 
     return (
         <section className="about-section">
-            <div className="about-div">
                 <Waves
                     className="about-bg no-select"
                     lineColor="rgba(255, 255, 255, 0.3)"
@@ -22,18 +22,20 @@ const About = () => {
                     xGap={12}
                     yGap={20}
                 />
-                {/* TODO: Fix bouncing issue */}
+            <div className="about-div">
                 <motion.header
                     className="about-text about-header"
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 175, duration: 0.3 } }}
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     ABOUT
                 </motion.header>
                 <motion.div
                     className="about-box about-box-left"
                     initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <h2 className="about-text about-h2">
                         WHO WE ARE
@@ -49,8 +51,9 @@ const About = () => {
                 </motion.div>
                 <motion.div
                     className="about-box about-box-right"
-                    initial={{ x: 100, opacity: 0}}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <h2 className="about-text about-h2">
                         OUR EXPERTISE
@@ -69,7 +72,8 @@ const About = () => {
                 <motion.div
                     className="about-box about-box-left"
                     initial={{ x: -100, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5 }}}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <h2 className="about-text about-h2">
                         INNOVATION & EMERGING TECH
@@ -83,7 +87,6 @@ const About = () => {
                         protocols, shaping the future of decentralized applications.
                     </p>
                 </motion.div>
-                <div style={{ marginTop: "10%" }}/>
             </div>
         </section>
     );

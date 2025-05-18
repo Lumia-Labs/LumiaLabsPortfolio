@@ -32,17 +32,14 @@
     transition: 1s ease;
     pointer-events: none;
 } */
-
-.member-card {
-    padding-top: 2%;
-}
-
+ 
 .member-description {
     width: 268px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     letter-spacing: 1px;
     color: white;
+    margin-bottom: 2rem;
 }
 
 .member-img {
@@ -81,9 +78,9 @@
 
 .members-header {
     text-align: center;
-    padding-top: 5%;
+    padding: 2rem 0;
     font-family: robotocondensed-bold;
-    font-size: 70px;
+    font-size: clamp(40px, 8vw, 70px);
     letter-spacing: 3px;
     color: white;
 }

@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
   
   .tilted-card-mobile-alert {
@@ -24,11 +25,36 @@
     .tilted-card-caption {
       display: none;
     }
+    .tilted-card-figure {
+      align-items: center;
+      justify-content: center;
+    }
+    .tilted-card-img {
+      width: 350px !important;
+      height: 350px !important;
+      position: relative !important;
+      margin: 0 auto !important;
+    }
+    .tilted-card-figure > div {
+      width: 350px !important;
+      height: 350px !important;
+      position: relative !important;
+      margin: 0 auto !important;
+    }
+    .tilted-card-figure canvas {
+      width: 100% !important;
+      height: 100% !important;
+      position: relative !important;
+    }
   }
   
   .tilted-card-inner {
     position: relative;
     transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
   }
   
   .tilted-card-img {
@@ -39,7 +65,24 @@
     border-radius: 15px;
     will-change: transform;
     transform: translateZ(0);
+    pointer-events: none;
   }
+
+/* Specific styling for AvatarCanvas */
+.tilted-card-figure canvas {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.tilted-card-figure > div {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+}
   
   .tilted-card-overlay {
     position: absolute;

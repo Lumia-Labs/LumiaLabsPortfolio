@@ -78,13 +78,18 @@ export default function TiltedCard({
     let display;
     if (projectId == 1) {
         display =
-            <AvatarCanvas
-                className="tilted-card-img"
-                style={{
-                    width: imageWidth,
-                    height: imageHeight
-                }}
-            />;
+            <div style={{
+                width: window.innerWidth <= 640 ? '350px' : imageWidth,
+                height: window.innerWidth <= 640 ? '350px' : imageHeight,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: '0 auto'
+            }}>
+                <AvatarCanvas
+                    className="tilted-card-img"
+                />
+            </div>;
     }
     else {
         display =
@@ -92,8 +97,8 @@ export default function TiltedCard({
                 src={imageSrc}
                 className="tilted-card-img"
                 style={{
-                    width: imageWidth,
-                    height: imageHeight
+                    width: window.innerWidth <= 640 ? '350px' : imageWidth,
+                    height: window.innerWidth <= 640 ? '350px' : imageHeight
                 }}
             />;
     }
@@ -112,41 +117,29 @@ export default function TiltedCard({
         >
             {showMobileWarning && (
                 <div className="tilted-card-mobile-alert">
-                    This effect is not optimized for mobile. Check on desktop.
+                    Hover to see more
                 </div>
             )}
             <motion.div
                 className="tilted-card-inner"
                 style={{
-                    width: imageWidth,
-                    height: imageHeight,
                     rotateX,
                     rotateY,
-                    scale
+                    scale,
                 }}
             >
                 {display}
-                {displayOverlayContent && overlayContent && (
-                <motion.div
-                    className="tilted-card-overlay"
-                >
-                    {overlayContent}
-                </motion.div>
+                {overlayContent && displayOverlayContent && (
+                    <motion.div
+                        className="tilted-card-overlay"
+                        style={{
+                            opacity,
+                        }}
+                    >
+                        {overlayContent}
+                    </motion.div>
                 )}
             </motion.div>
-            {/* {showTooltip && (
-                <motion.figcaption
-                className="tilted-card-caption"
-                style={{
-                    x,
-                    y,
-                    opacity,
-                    rotate: rotateFigcaption
-                }}
-                >
-                {captionText}
-                </motion.figcaption>
-            )} */}
         </figure>
     );
 }

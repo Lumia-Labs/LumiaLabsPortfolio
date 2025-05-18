@@ -24,25 +24,34 @@ const Hero = () => {
             animate={{ opacity: 1, transition: { duration: 1, ease: "linear" } }}
         >
             <div className="hero-text">
-                <header className="hero-header">
+                <motion.header
+                    className="hero-header"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     Crafting <br />
                     Digital <br />
                     Brilliance <br />
-                </header>
-                <a className="select-no">
-                    <br />
-                </a>
-                <p className="hero-body">
+                </motion.header>
+                <motion.p
+                    className="hero-body"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                >
                     At LumiaLabs we merge creativity, technology and strategy to deliver
                     cutting edge digital solutions. From intuitive interfaces and dynamic
                     web apps to robust enterprise platforms, we bring ideas to life across 
                     the digital landscape. Because true digital brilliance isn't just seen,
                     it's engineered.
-                </p>
+                </motion.p>
             </div>
             <motion.div
                 className="lightbulb-div select-no"
-                style={{ opacity: useTransform(scrollYProgress, [0, 0.08], [1, 0]) }}
+                style={{ 
+                    opacity: useTransform(scrollYProgress, [0, 0.03], [1, 0])
+                }}
             >
                 <img
                     className="lightbulb-bg"

@@ -19,10 +19,15 @@ const Members = () => {
     //TODO: Add click event to expand image and show bio
     return (
         <section className="members-section">
+            <motion.header
+                className="members-header"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                MEMBERS
+            </motion.header>
             <div className="members-container">
-                <header className="members-header">
-                    MEMBERS
-                </header>
                 <div className="members-gallery">
                     {shuffledMembers.map((member, i) => (
                         <motion.div
