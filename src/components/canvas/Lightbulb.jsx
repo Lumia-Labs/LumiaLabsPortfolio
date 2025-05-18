@@ -25,11 +25,7 @@ const CameraController = ({ cameraValues }) => {
 
 const LightbulbCanvas = () => {
     const lightbulb = useGLTF('/LumiaLabsPortfolio/models/lightbulb/lightbulb.glb');
-    const [cameraValues, setCameraValues] = useState({
-        zoom: 30,
-        position: [4, 0, 20]
-    });
-
+    
     // Calculate responsive camera values
     const getCameraValues = () => {
         const width = window.innerWidth;
@@ -50,6 +46,9 @@ const LightbulbCanvas = () => {
             };
         }
     };
+
+    // Set initial camera values based on window width
+    const [cameraValues, setCameraValues] = useState(getCameraValues());
 
     useEffect(() => {
         const handleResize = () => {

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Navbar, Hero, About, Services, Projects, Members } from "./components";
 import { Scene } from "./components/canvas";
 import { Canvas } from "@react-three/fiber";
+import PreloadAssets from "./components/PreloadAssets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,7 @@ function App() {
     return (
         <BrowserRouter>
             <div id="viewport" className="no-select">
+                <PreloadAssets />
                 <Navbar />
                 <Canvas style={{ position: "fixed", top: 0, right: 0, bottom: 0, left: 0 }}>
                     <Scene />
