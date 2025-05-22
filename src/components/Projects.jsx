@@ -30,7 +30,7 @@ const Projects = () =>  {
                     PROJECTS
                 </motion.header>
                 <div className="projects-grid">
-                    {projects.map((project, i) => {
+                    {projects.toReversed().map((project, i) => {
                         // Create a ref for each project
                         const ref = useRef(null);
                         projectRefs.current[i] = ref;
@@ -85,14 +85,16 @@ const Projects = () =>  {
                                 </motion.div>
 
                                 <motion.div style={{ x: cardX }}>
+                                    {/* TODO: Fix animation reset when scrolling on mobile*/}
                                     <TiltedCard
                                         projectId={project.id}
                                         imageSrc={project.image}
+                                        bgColor={project.img_bg_color}
                                         containerHeight="400px"
                                         containerWidth="400px"
-                                        imageHeight="400px"
-                                        imageWidth="400px"
-                                        rotateAmplitude={12}
+                                        imageHeight={project.img_height}
+                                        imageWidth={project.img_width}
+                                        rotateAmplitude={project.id === 4 ? 20 : 12}
                                         scaleOnHover={1.1}
                                         showMobileWarning={false}
                                         showTooltip={true}

@@ -35,6 +35,7 @@ const Members = () => {
                             className="member-card"
                             style={{ marginTop: Math.floor(Math.random() * 10)+"%" }}
                             initial={{ opacity: 0 }}
+                            // TODO: Fix animation delay for stacked view
                             whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.3 * (i) } }}
                         >
                             <motion.img

@@ -20,6 +20,8 @@ import real_estate from './services/real-estate.png';
 import api from './services/api.png';
 import business from './services/business.png';
 
+import expense_tracker from './projects/expense-tracker.png';
+
 export {
     logo,
     menu,
@@ -39,5 +41,6 @@ export {
     ui_ux,
     real_estate,
     api,
-    business
+    business,
+    expense_tracker
 } ;

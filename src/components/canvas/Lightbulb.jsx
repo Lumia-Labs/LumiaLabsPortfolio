@@ -25,7 +25,7 @@ const CameraController = ({ cameraValues }) => {
 
 const LightbulbCanvas = () => {
     const lightbulb = useGLTF('/LumiaLabsPortfolio/models/lightbulb/lightbulb.glb');
-    
+
     // Calculate responsive camera values
     const getCameraValues = () => {
         const width = window.innerWidth;

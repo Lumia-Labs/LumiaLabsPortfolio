@@ -1,6 +1,7 @@
 import {
     adnanahmed, allenhwu, fahidkarim, kenwoon, kennyhe,
-    ai, software, web, mobile_app, cloud, ui_ux, real_estate, api, business
+    ai, software, web, mobile_app, cloud, ui_ux, real_estate, api, business,
+    expense_tracker
 } from "../assets";
 
 export const navLinks = [
@@ -93,22 +94,22 @@ export const services = [
 export const projects = [
     {
         id: 1,
-        name: "3D PORTFOLIO WEBSITE",
-        features: "Showcases projects and skills with an engaging user interface",
-        overview: "A personal portfolio website featuring 3D modelling and interactive design elements",
+        name: "WAREHOUSE MANAGEMENT TOOL",
+        features: "Product management, stock updates, and a user-friendly dashboard",
+        overview: "A full-stack application for managing warehouse products and stock levels",
         tags: [
-            "REACT.JS",
-            "NODE.JS",
-            "THREE.JS",
-            "TAILWIND CSS",
-            "BLENDER"
+            "TYPESCRIPT",
+            "CSS",
+            "JAVASCRIPT",
+            "HTML"
         ],
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-        color: "#c6975f",
-        bg_color: "#faf1e4",
-        source_code_link: "https://kenwoon.github.io/portfolio/",
-        start_scroll_pos: 0.45,
-        end_scroll_pos: 0.58
+        image: "",
+        img_height: "400px",
+        img_width: "400px",
+        img_bg_color: "",
+        color: "#4caf50",
+        bg_color: "#e8f5e9",
+        source_code_link: "https://github.com/KennyHc/warehouse-management-1"
     },
     {
         id: 2,
@@ -121,30 +122,51 @@ export const projects = [
             "SEQUELIZE",
             "POSTGRESQL"
         ],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        image: "",
+        img_height: "400px",
+        img_width: "400px",
+        img_bg_color: "",
         color: "#00bcd4",
         bg_color: "#e0f7fa",
-        source_code_link: "https://github.com/KennyHc/Data-Dashboard",
-        start_scroll_pos: 0.55,
-        end_scroll_pos: 0.68
+        source_code_link: "https://github.com/KennyHc/Data-Dashboard"
     },
     {
         id: 3,
-        name: "WAREHOUSE MANAGEMENT TOOL",
-        features: "Product management, stock updates, and a user-friendly dashboard",
-        overview: "A full-stack application for managing warehouse products and stock levels",
+        name: "3D PORTFOLIO WEBSITE",
+        features: "Showcases projects and skills with an engaging user interface",
+        overview: "A personal portfolio website featuring 3D modelling and interactive design elements",
+        tags: [
+            "REACT.JS",
+            "NODE.JS",
+            "THREE.JS",
+            "TAILWIND CSS",
+            "BLENDER"
+        ],
+        image: "",
+        img_height: "400px",
+        img_width: "400px",
+        img_bg_color: "",
+        color: "#c6975f",
+        bg_color: "#faf1e4",
+        source_code_link: "https://kenwoon.github.io/portfolio/"
+    },
+    {
+        id: 4,
+        name: "EXPENSE TRACKER",
+        features: "Track your expenses and manage your budget",
+        overview: "Coming soon...",
         tags: [
             "TYPESCRIPT",
-            "CSS",
-            "JAVASCRIPT",
-            "HTML"
+            "EXPO",
+            "REACT NATIVE"
         ],
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
-        color: "#4caf50",
-        bg_color: "#e8f5e9",
-        source_code_link: "https://github.com/KennyHc/warehouse-management-1",
-        start_scroll_pos: 0.65,
-        end_scroll_pos: 0.78
+        image: expense_tracker,
+        img_height: "250px",
+        img_width: "250px",
+        img_bg_color: "#8FC1BD",
+        color: "#3E7C78",
+        bg_color: "#8FC1BD",
+        source_code_link: ""
     }
 ];
 

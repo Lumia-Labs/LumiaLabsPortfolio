@@ -6,13 +6,13 @@ import "./TiltedCard.css";
 const springValues = {
     damping: 30,
     stiffness: 100,
-    mass: 2,
+    mass: 1,
 };
 
 export default function TiltedCard({
     projectId,
     imageSrc,
-    color,
+    bgColor,
     captionText = "",
     containerHeight = "300px",
     containerWidth = "100%",
@@ -42,24 +42,24 @@ export default function TiltedCard({
     const [lastY, setLastY] = useState(0);
 
     function handleMouse(e) {
-        // if (!ref.current) return;
+        if (!ref.current || projectId !== 4) return;
 
-        // const rect = ref.current.getBoundingClientRect();
-        // const offsetX = e.clientX - rect.left - rect.width / 2;
-        // const offsetY = e.clientY - rect.top - rect.height / 2;
+        const rect = ref.current.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left - rect.width / 2;
+        const offsetY = e.clientY - rect.top - rect.height / 2;
 
-        // const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
-        // const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
+        const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
+        const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
 
-        // rotateX.set(rotationX);
-        // rotateY.set(rotationY);
+        rotateX.set(rotationX);
+        rotateY.set(rotationY);
 
-        // x.set(e.clientX - rect.left);
-        // y.set(e.clientY - rect.top);
+        x.set(e.clientX - rect.left);
+        y.set(e.clientY - rect.top);
 
-        // const velocityY = offsetY - lastY;
-        // rotateFigcaption.set(-velocityY * 0.6);
-        // setLastY(offsetY);
+        const velocityY = offsetY - lastY;
+        rotateFigcaption.set(-velocityY * 0.6);
+        setLastY(offsetY);
     }
 
     function handleMouseEnter() {
@@ -76,7 +76,7 @@ export default function TiltedCard({
     }
 
     let display;
-    if (projectId == 1) {
+    if (projectId == 3) {
         display =
             <div style={{
                 width: window.innerWidth <= 640 ? '350px' : imageWidth,
@@ -98,7 +98,11 @@ export default function TiltedCard({
                 className="tilted-card-img"
                 style={{
                     width: window.innerWidth <= 640 ? '350px' : imageWidth,
-                    height: window.innerWidth <= 640 ? '350px' : imageHeight
+                    height: window.innerWidth <= 640 ? '350px' : imageHeight,
+                    rotateX: projectId === 4 ? rotateX : 0,
+                    rotateY: projectId === 4 ? rotateY : 0,
+                    position: 'relative',
+                    zIndex: 2
                 }}
             />;
     }
@@ -123,9 +127,12 @@ export default function TiltedCard({
             <motion.div
                 className="tilted-card-inner"
                 style={{
-                    rotateX,
-                    rotateY,
                     scale,
+                    backgroundColor: bgColor,
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '15px',
+                    position: 'relative'
                 }}
             >
                 {display}
